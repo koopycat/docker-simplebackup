@@ -6,7 +6,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 ARG CACHEBUST=1 
-RUN git clone --recursive https://github.com/vkoop/simple-server-backup.git /backup-script
+RUN git clone --recursive https://github.com/koopycat/simple-server-backup.git /backup-script
 
 COPY entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/entrypoint.sh
