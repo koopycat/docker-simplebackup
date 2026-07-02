@@ -2,7 +2,7 @@
 
 ## Description
 
-A simple Docker container that runs server backups using [simple-server-backup](https://github.com/vkoop/simple-server-backup). The container runs the backup immediately when started and then exits.
+A simple Docker container that runs server backups using [simple-server-backup](https://github.com/koopycat/simple-server-backup). The container runs the backup immediately when started and then exits.
 
 ## Setup
 
