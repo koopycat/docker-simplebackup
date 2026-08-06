@@ -1,4 +1,4 @@
-FROM debian:bookworm-20260713-slim
+FROM debian:bookworm-20260803-slim
 
 RUN apt-get update \
     && apt-get install -y git rsync openssh-client \
