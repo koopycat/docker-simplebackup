@@ -7,7 +7,7 @@ A simple Docker container that runs server backups using [simple-server-backup](
 ## Setup
 
 ```bash
-docker run -v '<LOCAL_BACKUP_FOLDER>:/backups' ghcr.io/vkoop/docker-simplebackup:master
+docker run -v '<LOCAL_BACKUP_FOLDER>:/backups' ghcr.io/koopycat/docker-simplebackup:master
 ```
 
 ## Scheduling
@@ -23,7 +23,7 @@ This container does not handle scheduling internally. To schedule backups, use e
 
 ```bash
 # Run backup daily at 2 AM
-0 2 * * * docker run --rm -v '/path/to/backups:/backups' ghcr.io/vkoop/docker-simplebackup:master
+0 2 * * * docker run --rm -v '/path/to/backups:/backups' ghcr.io/koopycat/docker-simplebackup:master
 ```
 
 ### Example with docker-compose and external scheduling
@@ -33,7 +33,7 @@ version: '3'
 
 services:
   backup:
-    image: ghcr.io/vkoop/docker-simplebackup:master
+    image: ghcr.io/koopycat/docker-simplebackup:master
     volumes:
       - ./backups:/backups
 ```

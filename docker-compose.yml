@@ -1,6 +1,6 @@
 services:
   backup:
-    image:  ghcr.io/vkoop/docker-simplebackup:master
+    image:  ghcr.io/koopycat/docker-simplebackup:master
     volumes:
       - "backup:/backups"
       - "config:/backup-script/config"
