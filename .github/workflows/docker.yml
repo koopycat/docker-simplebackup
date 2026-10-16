@@ -20,6 +20,10 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # The repository's default GITHUB_TOKEN is read-only; pushing to GHCR needs packages: write
+    permissions:
+      contents: read
+      packages: write
     strategy:
       matrix:
         platform: [x86_64]  # Add more platforms if needed
