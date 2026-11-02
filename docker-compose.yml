@@ -1,6 +1,6 @@
 services:
   backup:
-    image:  ghcr.io/koopycat/docker-simplebackup:master
+    image:  ghcr.io/koopycat/docker-simplebackup:master@sha256:4c548df82e84f077f5d2abdd32b9abdffc1de7ffd077fc058a6853c074959d78
     volumes:
       - "backup:/backups"
       - "config:/backup-script/config"
@@ -10,7 +10,7 @@ services:
     
   # Ofelia scheduler container
   ofelia:
-    image: mcuadros/ofelia:latest
+    image: mcuadros/ofelia:latest@sha256:efcbe2c5cf658a25de6443c1462d653f9cc03791d642e01fc6c638a00f97e492
     depends_on:
       - backup
     command: daemon --docker
